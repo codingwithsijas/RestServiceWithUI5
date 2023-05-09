@@ -1,0 +1,33 @@
+<mvc:View controllerName="in.sijas.restwithui5.controller.Initial"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Table id="userTable" items="{/users}">
+        <headerToolbar>
+            <Toolbar>
+                <Title text="Users"></Title>
+            </Toolbar>
+        </headerToolbar>
+        <columns>
+            <Column>
+                <Text text="Name"/>
+            </Column>
+            <Column>
+                <Text text="Email"/>
+            </Column>
+            <Column>
+                <Text text="Gender"/>
+            </Column>
+            <Column>
+                <Text text="Status"/>
+            </Column>
+        </columns>
+        <ColumnListItem>
+            <cells>
+                <Text text="{name}"/>
+                <Text text="{email}"/>
+                <Text text="{gender}"/>
+                <Text text="{status}"/>
+            </cells>
+        </ColumnListItem>
+    </Table>
+</mvc:View>

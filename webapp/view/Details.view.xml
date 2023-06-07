@@ -1,0 +1,64 @@
+<mvc:View xmlns:semantic="sap.f.semantic"
+	controllerName="in.sijas.restwithui5.controller.Details"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+  xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+>
+<semantic:SemanticPage showFooter="true">
+
+	<f:SimpleForm id="SimpleFormChange354"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Address"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Name" />
+				<Input value="{name}" />
+				<Label text="Email" />
+				<Input value="{email}" />
+        <Label text="Gender"/>
+        <Select selectedKey="{gender}">
+          <core:Item key="male" text="Male"></core:Item>
+          <core:Item key="female" text="Female"></core:Item>
+        </Select>
+        <Label text="Status"/>
+        <Select selectedKey="{status}">
+          <core:Item key="active" text="Active"></core:Item>
+          <core:Item key="inactive" text="Inactive"></core:Item>
+        </Select>
+				
+			</f:content>
+		</f:SimpleForm>
+
+<semantic:positiveAction>
+  <semantic:PositiveAction text="Save" press="TriggerSave"
+  >
+      
+  </semantic:PositiveAction>
+</semantic:positiveAction>
+<semantic:negativeAction>
+  <semantic:NegativeAction
+      text="Delete" visible="{isSaved}" press="TriggerDelete"
+  >
+      
+  </semantic:NegativeAction>
+</semantic:negativeAction>
+</semantic:SemanticPage>
+</mvc:View>

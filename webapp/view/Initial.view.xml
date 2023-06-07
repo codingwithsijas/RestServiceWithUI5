@@ -5,6 +5,8 @@
         <headerToolbar>
             <Toolbar>
                 <Title text="Users"></Title>
+                <ToolbarSpacer />
+                <Button icon="sap-icon://add" press="CreateNew"></Button>
             </Toolbar>
         </headerToolbar>
         <columns>
@@ -21,7 +23,7 @@
                 <Text text="Status"/>
             </Column>
         </columns>
-        <ColumnListItem>
+        <ColumnListItem type="Navigation" press="navigateToDetails" highlight="{= ${isSaved}?'Success':'Error'}">
             <cells>
                 <Text text="{name}"/>
                 <Text text="{email}"/>

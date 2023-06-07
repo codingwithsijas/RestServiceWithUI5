@@ -83,6 +83,20 @@
           "target": [
             "TargetInitial"
           ]
+        },
+        {
+          "name": "Details",
+          "pattern": "user/{user_id}",
+          "target":[
+            "Details"
+          ]
+        },
+        {
+          "name": "Create",
+          "pattern": "create",
+          "target":[
+            "Details"
+          ]
         }
       ],
       "targets": {
@@ -92,6 +106,13 @@
           "clearControlAggregation": false,
           "viewId": "Initial",
           "viewName": "Initial"
+        },
+        "Details" : {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Details",
+          "viewName": "Details"
         }
       }
     },
